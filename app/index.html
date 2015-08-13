@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World!</title>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="angular-material.min.css">
+    <link rel="stylesheet" href="font.css">
+    <script src="angular.min.js"></script>
+    <script src="angular-animate.min.js"></script>
+    <script src="angular-aria.min.js"></script>
+    <script src="angular-material.min.js"></script>
+    
+    <script src="app.js"></script>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using io.js <script>document.write(process.version)</script>
-    and Electron <script>document.write(process.versions['electron'])</script>.
+  <body ng-app="SimpleCalculator">
+    <div layout="column" ng-controller="MainController">
+      <div layout layout-sm="column">
+        <md-input-container style="width:100%">
+          <input placeholder="0" disabled>
+        </md-input-container>
+      </div>
+      <div layout="row" class="butons-row">
+        <div flex>
+          <md-button md-no-ink class="md-primary">7</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">8</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">9</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">/</md-button>
+        </div>
+      </div>
+      <div layout="row">
+        <div flex>
+          <md-button md-no-ink class="md-primary">4</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">5</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">6</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">*</md-button>
+        </div>
+      </div>
+      <div layout="row">
+        <div flex>
+          <md-button md-no-ink class="md-primary">1</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">2</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">3</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">-</md-button>
+        </div>
+      </div>
+      <div layout="row">
+        <div flex>
+          <md-button md-no-ink class="md-primary">0</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">.</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">+</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary">=</md-button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
