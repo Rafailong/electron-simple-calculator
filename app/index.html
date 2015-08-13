@@ -15,63 +15,63 @@
     <div layout="column" ng-controller="MainController">
       <div layout layout-sm="column">
         <md-input-container style="width:100%">
-          <input placeholder="0" disabled>
+          <input disabled ng-model="operation.text" md-no-autogrow="false" style="text-align: right;" maxlength="10">
         </md-input-container>
       </div>
       <div layout="row" class="butons-row">
         <div flex>
-          <md-button md-no-ink class="md-primary">7</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(7)">7</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">8</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(8)">8</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">9</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(9)">9</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">/</md-button>
-        </div>
-      </div>
-      <div layout="row">
-        <div flex>
-          <md-button md-no-ink class="md-primary">4</md-button>
-        </div>
-        <div flex>
-          <md-button md-no-ink class="md-primary">5</md-button>
-        </div>
-        <div flex>
-          <md-button md-no-ink class="md-primary">6</md-button>
-        </div>
-        <div flex>
-          <md-button md-no-ink class="md-primary">*</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="operatorClick('/')">/</md-button>
         </div>
       </div>
       <div layout="row">
         <div flex>
-          <md-button md-no-ink class="md-primary">1</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(4)">4</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">2</md-button>
+          <md-button md-no-ink class="md-primary"ng-click="numberClick(5)">5</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">3</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(6)">6</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">-</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="operatorClick('*')">*</md-button>
         </div>
       </div>
       <div layout="row">
         <div flex>
-          <md-button md-no-ink class="md-primary">0</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(1)">1</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">.</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(2)">2</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">+</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(3)">3</md-button>
         </div>
         <div flex>
-          <md-button md-no-ink class="md-primary">=</md-button>
+          <md-button md-no-ink class="md-primary" ng-click="operatorClick('-')">-</md-button>
+        </div>
+      </div>
+      <div layout="row">
+        <div flex>
+          <md-button md-no-ink class="md-primary" ng-click="numberClick(0)">0</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary" ng-click="operatorClick('+')">+</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary" ng-click="operatorClick('=')">=</md-button>
+        </div>
+        <div flex>
+          <md-button md-no-ink class="md-primary" ng-click="clearOperation()">C</md-button>
         </div>
       </div>
     </div>
